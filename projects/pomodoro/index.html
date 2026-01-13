@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pomodoro</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="navigation.css">
+</head>
+<body>
+  <nav class="back-nav">
+    <a href="../../index.html">← Back to Portfolio</a>
+  </nav>
+  <main class="container">
+    <h1>Pomodoro Timer</h1>
+
+    <section class="timer-card">
+      <div class="mode" id="mode">Work</div>
+      <div class="time" id="time">1:00</div>
+
+      <div class="controls">
+        <button id="startBtn">Start</button>
+        <button id="pauseBtn" disabled>Pause</button>
+        <button id="resetBtn">Reset</button>
+      </div>
+
+      <div class="stats">
+        <div>
+          <span>Work sessions:</span>
+          <strong id="sessionCount">0</strong>
+        </div>
+        <div>
+          <span>Breaks:</span>
+          <strong id="breakCount">0</strong>
+        </div>
+      </div>
+    </section>
+
+    <small class="note">Work period: 25 minutes. Break: 5 minutes. When a work period ends, a session is counted.</small>
+  </main>
+
+  <audio id="notificationSound" src="sounds/mixkit-correct-answer-tone-2870.wav"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>

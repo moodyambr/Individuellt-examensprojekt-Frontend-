@@ -1,0 +1,573 @@
+/* Game Layout Styles - Matching Main Website Theme */
+
+:root {
+  --accent: #06ecf0;
+  --btn-bg: #5bc0d4;
+  --btn-hover: #05bcf9;
+  --secondary-color: #71876e;
+  --text-color: #333;
+  --bg-color: #a6b9c4;
+  --game-container-bg: #f8f9fa;
+  --shadow: 0 2px 8px rgba(43, 122, 120, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: var(--bg-color);
+  font-family: Inter, system-ui, Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+}
+
+.game-container {
+  background: var(--game-container-bg);
+  border-radius: 15px;
+  padding: 30px 20px;
+  max-width: 900px;
+  width: 100%;
+  margin: auto;
+  box-shadow: var(--shadow);
+  position: relative;
+}
+
+h2 {
+  font-size: clamp(1.25rem, 4vw, 1.75rem);
+  color: var(--text-color);
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+p {
+  color: var(--text-color);
+  margin: 10px 0;
+  font-size: 1.1rem;
+}
+
+.card-container {
+  margin: 25px 0;
+  display: flex;
+  justify-content: center;
+  min-height: 250px;
+  align-items: center;
+}
+
+/* Card Styling */
+.card {
+  position: relative;
+  width: 150px;
+  height: 230px;
+  border: 2px solid var(--secondary-color);
+  border-radius: 12px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+
+.card .corner {
+  position: absolute;
+  font-size: 1.125rem;
+  font-weight: bold;
+}
+
+.card .top-left {
+  top: 8px;
+  left: 10px;
+}
+
+.card .bottom-right {
+  bottom: 8px;
+  right: 10px;
+  transform: rotate(180deg);
+}
+
+.card .card-suit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4rem;
+}
+
+/* Red cards (hearts and diamonds) */
+.red-card .corner,
+.red-card .card-suit {
+  color: #e53935;
+}
+
+.red-card {
+  color: #e53935;
+}
+
+/* Button Styling - Matching Main Theme */
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.buttons button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  background: var(--btn-bg);
+  color: var(--text-color);
+  cursor: pointer;
+  font-size: clamp(0.85rem, 2vw, 1rem);
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  flex: 1 1 auto;
+  min-width: 100px;
+}
+
+.buttons button:hover {
+  background: var(--btn-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.buttons button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.restart-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  min-width: auto !important;
+  width: 40px;
+  height: 40px;
+  padding: 8px !important;
+  border-radius: 50%;
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#message {
+  margin-top: 20px;
+  font-weight: 600;
+  font-size: clamp(1rem, 2.5vw, 1.125rem);
+  color: var(--text-color);
+  min-height: 30px;
+}
+
+
+/* Responsive Design - Matching main website's comprehensive breakpoints */
+
+/* Large tablets and small desktops */
+@media screen and (max-width: 900px) {
+  .game-container {
+    max-width: 90%;
+    padding: 28px 22px;
+  }
+
+  h2 {
+    font-size: 1.65rem;
+  }
+
+  p {
+    font-size: 1.05rem;
+  }
+
+  .card {
+    width: 160px;
+    height: 245px;
+  }
+
+  .card .corner {
+    font-size: 1.2rem;
+  }
+
+  .card .card-suit {
+    font-size: 4.5rem;
+  }
+}
+
+/* Tablets */
+@media screen and (max-width: 768px) {
+  body {
+    padding: 15px;
+  }
+
+  .game-container {
+    padding: 35px 25px;
+    border-radius: 15px;
+    max-width: 95%;
+  }
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+  }
+
+  p {
+    font-size: 1.2rem;
+    margin: 12px 0;
+  }
+
+  .card-container {
+    margin: 30px 0;
+    min-height: 300px;
+  }
+
+  .card {
+    width: 180px;
+    height: 270px;
+  }
+
+  .card .corner {
+    font-size: 1.375rem;
+    top: 10px;
+    left: 12px;
+  }
+
+  .card .bottom-right {
+    bottom: 10px;
+    right: 12px;
+  }
+
+  .card .card-suit {
+    font-size: 5rem;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .buttons button {
+    width: 100%;
+    min-width: auto;
+    padding: 16px 20px;
+    font-size: 1.15rem;
+  }
+
+  .restart-btn {
+    top: 15px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    font-size: 1.25rem;
+    min-width: auto !important;
+    min-height: auto !important;
+    max-width: 40px;
+    max-height: 40px;
+    padding: 8px !important;
+    box-sizing: border-box;
+  }
+}
+
+/* Large mobile devices */
+@media screen and (max-width: 600px) {
+  body {
+    padding: 15px;
+  }
+
+  .game-container {
+    padding: 45px 35px;
+    max-width: 98%;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+  }
+
+  p {
+    font-size: 1.4rem;
+    margin: 16px 0;
+  }
+
+  .card-container {
+    min-height: 380px;
+    margin: 35px 0;
+  }
+
+  .card {
+    width: 220px;
+    height: 330px;
+  }
+
+  .card .corner {
+    font-size: 1.7rem;
+    top: 14px;
+    left: 16px;
+  }
+
+  .card .bottom-right {
+    bottom: 14px;
+    right: 16px;
+  }
+
+  .card .card-suit {
+    font-size: 6.5rem;
+  }
+
+  .buttons button {
+    padding: 20px 26px;
+    font-size: 1.35rem;
+  }
+
+  #message {
+    font-size: 1.4rem;
+    margin-top: 28px;
+  }
+}
+
+/* Medium mobile devices */
+@media screen and (max-width: 500px) {
+  .game-container {
+    padding: 48px 32px;
+  }
+
+  h2 {
+    font-size: 2.6rem;
+  }
+
+  p {
+    font-size: 1.45rem;
+  }
+
+  .card {
+    width: 230px;
+    height: 345px;
+  }
+
+  .card .corner {
+    font-size: 1.75rem;
+  }
+
+  .card .card-suit {
+    font-size: 6.75rem;
+  }
+
+  .buttons button {
+    padding: 22px 28px;
+    font-size: 1.4rem;
+  }
+}
+
+/* Standard mobile devices */
+@media screen and (max-width: 480px) {
+  body {
+    padding: 15px;
+  }
+
+  .game-container {
+    padding: 50px 35px;
+    max-width: 100%;
+  }
+
+  h2 {
+    margin-bottom: 32px;
+    font-size: 2.8rem;
+  }
+
+  p {
+    font-size: 1.5rem;
+    margin: 18px 0;
+  }
+
+  .card-container {
+    min-height: 400px;
+    margin: 40px 0;
+  }
+
+  .card {
+    width: 240px;
+    height: 360px;
+  }
+
+  .card .corner {
+    font-size: 1.8rem;
+    top: 15px;
+    left: 18px;
+  }
+
+  .card .bottom-right {
+    bottom: 15px;
+    right: 18px;
+  }
+
+  .card .card-suit {
+    font-size: 7rem;
+  }
+
+  .buttons button {
+    padding: 24px 30px;
+    font-size: 1.5rem;
+  }
+
+  #message {
+    font-size: 1.5rem;
+    margin-top: 35px;
+    min-height: 45px;
+  }
+}
+
+/* Small mobile devices */
+@media screen and (max-width: 400px) {
+  body {
+    padding: 12px;
+  }
+
+  .game-container {
+    padding: 45px 30px;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 28px;
+  }
+
+  p {
+    font-size: 1.4rem;
+    margin: 15px 0;
+  }
+
+  .card-container {
+    min-height: 370px;
+    margin: 35px 0;
+  }
+
+  .card {
+    width: 210px;
+    height: 315px;
+  }
+
+  .card .corner {
+    font-size: 1.6rem;
+    top: 13px;
+    left: 15px;
+  }
+
+  .card .bottom-right {
+    bottom: 13px;
+    right: 15px;
+  }
+
+  .card .card-suit {
+    font-size: 6.5rem;
+  }
+
+  .buttons button {
+    padding: 22px 26px;
+    font-size: 1.35rem;
+  }
+
+  .restart-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1.25rem;
+    min-width: auto !important;
+    min-height: auto !important;
+    max-width: 40px;
+    max-height: 40px;
+    padding: 8px !important;
+    box-sizing: border-box;
+  }
+  #message {
+    font-size: 1.4rem;
+    margin-top: 30px;
+    min-height: 40px;
+  }
+}
+
+/* Extra small mobile devices */
+@media screen and (max-width: 360px) {
+  body {
+    padding: 10px;
+  }
+
+  .game-container {
+    padding: 40px 25px;
+  }
+
+  h2 {
+    font-size: 2.3rem;
+    margin-bottom: 25px;
+  }
+
+  p {
+    font-size: 1.3rem;
+    margin: 14px 0;
+  }
+
+  .card-container {
+    min-height: 350px;
+    margin: 30px 0;
+  }
+
+  .card {
+    width: 190px;
+    height: 285px;
+  }
+
+  .card .corner {
+    font-size: 1.5rem;
+    top: 11px;
+    left: 13px;
+  }
+
+  .card .bottom-right {
+    bottom: 11px;
+    right: 13px;
+  }
+
+  .card .card-suit {
+    font-size: 6rem;
+  }
+
+  .buttons button {
+    padding: 20px 24px;
+    font-size: 1.4rem;
+  }
+
+  .restart-btn {
+    width: 38px;
+    height: 38px;
+    font-size: 1.1rem;
+    min-width: auto !important;
+    min-height: auto !important;
+    max-width: 38px;
+    max-height: 38px;
+    padding: 8px !important;
+    box-sizing: border-box;
+  }
+
+  #message {
+    font-size: 1.7rem;
+    margin-top: 25px;
+    min-height: 38px;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .buttons,
+  .restart-btn {
+    display: none;
+  }
+}

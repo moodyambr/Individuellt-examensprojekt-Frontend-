@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>About — My Portfolio</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <div class="container header-inner">
+      <h1 class="logo">My Portfolio</h1>
+      <nav aria-label="Main navigation">
+        <!--Hamburger menu button-->
+        <button id="nav-toggle-2" aria-expanded="false" aria-controls="main-nav-2" class="hamburger-btn">
+          <svg class="icon icon-menu" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M3 12H21M3 6H21M3 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <svg class="icon icon-close" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <span class="sr-only">Menu</span>
+        </button>
+        
+        <ul id="main-nav-2" class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" aria-current="page">About</a></li>
+          <li><a href="projects/project1.html">Country Search</a></li>
+          <li><a href="projects/cards-game/index.html">Cards Game</a></li>
+          <li><a href="projects/pomodoro/index.html">Pomodoro</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+  <section class="page-section">
+    <h2 class="page-title">About Me</h2>
+    <p>
+      Hi! My name is Moody and I'm studying to become a software developer with a focus on mobility services.
+      I created this website as part of a hobby project to practice HTML, CSS, and JavaScript.
+      Here I share my projects, images, and small interactive demo examples.
+    </p>
+  </section>
+
+  <section class="page-section">
+    <h3>Technologies I Use on This Website</h3>
+    <ul class="tech-list">
+      <li><strong>HTML5:</strong> Semantic structure and accessibility</li>
+      <li><strong>CSS3:</strong> Flexbox, Grid, variables and responsive design</li>
+      <li><strong>JavaScript (ES6):</strong> DOM manipulation, modules and events</li>
+      <li><strong>LocalStorage:</strong> To save the Todo list locally</li>
+    </ul>
+  </section>
+
+  <section class="page-section">
+    <h3>What I Want to Learn Next</h3>
+    <p>
+      I want to deepen my knowledge of JavaScript frameworks like <strong>React</strong> and <strong>Vue</strong>, and
+      learn the basics of backend development with <strong>Node.js</strong> and <strong>API management</strong>.
+      My goal is to be able to build complete web applications with both frontend and backend.
+    </p>
+  </section>
+</main>
+
+  <footer>
+    <div class="container footer-inner">
+      <p>© 2025 My Portfolio</p>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="about.html">About</a>
+        <a href="index.html">Home</a>
+        <a href="projects/project1.html">Country Search</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/script.js" type="module"></script>
+</body>
+</html>

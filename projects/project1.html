@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Projects — My Portfolio</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/project.css">
+</head>
+<body>
+  <header>
+    <div class="container header-inner">
+      <h1 class="logo">My Portfolio</h1>
+      <nav aria-label="Main navigation">
+        <!-- Hamburger menu button -->
+        <button id="nav-toggle-3" aria-expanded="false" aria-controls="main-nav-3" class="hamburger-btn">
+          <svg class="icon icon-menu" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M3 12H21M3 6H21M3 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <svg class="icon icon-close" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <span class="sr-only">Menu</span>
+        </button>
+        
+        <ul id="main-nav-3" class="nav-list">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="project1.html" aria-current="page">Country Search</a></li>
+          <li><a href="cards-game/index.html">Cards Game</a></li>
+          <li><a href="pomodoro/index.html">Pomodoro</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="page-section">
+      <h2 class="page-title">My Project</h2>
+      <p>
+        A concise portfolio of interactive web projects built with HTML, CSS, and JavaScript: a country search tool, an image gallery with persistent likes, a todo list, a cards game, and a Pomodoro timer. Application state is stored locally using the Web Storage API.
+      </p>
+    </section>
+
+    <!-- Country search section -->
+    <section class="page-section">
+      <h3>🌍 Country Search</h3>
+      <p>Select a country to view information about capital, population, best cities and map:</p>
+
+      <label for="countrySelect">Select a country:</label>
+      <select id="countrySelect">
+        <option value="">-- Select country --</option>
+        <option value="Greece">Greece</option>
+        <option value="Spain">Spain</option>
+        <option value="Turkey">Turkey</option>
+      </select>
+
+      <button id="searchBtn">Show information</button>
+
+      <h4>Result</h4>
+      <div id="result"></div>
+    </section>
+
+    <section class="page-section">
+      <h3>🌍 Country Search</h3>
+      <details>
+        <summary>How does the country search function work?</summary>
+        <p>
+          The function uses a <code>countries</code>-array with objects for each country.
+          When the user selects a country and clicks the "Show information" button,
+          the corresponding data is retrieved and displayed in the result area.
+        </p>
+      </details>
+      <details>
+        <summary> What interactive features did I implement?</summary>
+        <p>
+          The user can choose between three countries in a dropdown menu.
+          When clicking the button, information about the capital, population, best cities, and a map is displayed.
+          If no country is selected, an error message is shown.
+        </p>
+      </details>
+      <details>
+        <summary>What did I learn most from this project?</summary>
+        <p>
+          I learned a lot about DOM manipulation, event handling, and localStorage.
+        </p>
+      </details>
+      
+    </section>
+
+    <section class="page-section">
+      <h3>🖼️Gallery</h3>
+      <details>
+        <summary>How does the gallery work?</summary>
+        <p>
+          The gallery displays images in a grid with the ability to "like" each image and open them in fullscreen.
+          The like counter is saved in <code>localStorage</code> and the like button becomes highlighted.
+        </p>
+      </details>
+      <details>
+        <summary>What technologies were used?</summary>
+        <p>
+          I used HTML5 for semantic structure, CSS Grid and Flexbox for layout,
+          and JavaScript (ES6) for DOM manipulation and event handling.
+        </p>
+      </details>
+      <details>
+        <summary>How was the like function implemented?</summary>
+        <p>
+          The like system uses localStorage to save both the number of likes and which images have been liked.
+          CSS animations create a smooth bounce effect when you click, and the heart changes from empty (♡) 
+          to filled (♥) with red color. Formatting of large numbers (1K, 1M) prevents the UI from breaking.
+        </p>
+      </details>
+    </section>
+
+    <section class="page-section">
+      <h3>📋Todo List</h3>
+      <details>
+        <summary>How does the todo list work?</summary>
+        <p>
+          The todo list allows users to add, mark as complete, and delete tasks.
+          Tasks are saved in <code>localStorage</code> so they remain after page reload.
+        </p>
+      </details>
+      <details>
+        <summary>What did I learn most from?</summary>
+        <p>
+          I learned a lot about DOM manipulation, event handling and localStorage.
+        </p>
+      </details>
+      <details>
+        <summary>What would I do differently next time?</summary>
+        <p>
+          Next time I would plan the code structure better from the beginning and use a more modular approach.
+          I would also spend more time writing comments in the code for better documentation.
+          More testing of functionality would also be beneficial.
+        </p>
+      </details>
+    </section>
+
+    <section class="page-section">
+      <h3>🎮Game</h3>
+      <details>
+        <summary>How does the cards-game work?</summary>
+        <p>
+          The game is a simple game where the user has to guess 'higher', 'lower' or 'equal' to the next card.
+        </p>
+      </details>
+      <details>
+        <summary>What technologies were used?</summary>
+        <p>
+          I used HTML5 for semantic structure, CSS for styling, and JavaScript (ES6) for game logic and DOM manipulation.
+        </p>
+      </details>
+    </section>
+
+    <section class="page-section">
+      <h3>🕒Pomodoro</h3>
+      <details>
+        <summary>How does the pomodoro timer work?</summary>
+        <p>
+          The pomodoro timer is a simple timer that allows users to start, pause, and reset a work/break timer.
+          It keeps track of the number of work sessions and breaks taken.
+        </p>
+      </details>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <p>© 2025 My Portfolio</p>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="../projects/project1.html">Country Search</a>
+        <a href="../index.html">Home</a>
+        <a href="../about.html">About</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="../js/script.js" type="module"></script>
+</body>
+</html>

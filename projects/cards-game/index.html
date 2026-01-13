@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Game - Higher or Lower</title>
+  <link rel="stylesheet" href="layout.css">
+  <link rel="stylesheet" href="navigation.css">
+</head>
+<body>
+  <nav class="back-nav">
+    <a href="../../index.html">← Back to Portfolio</a>
+  </nav>
+  <div class="game-container">
+    <h2>Card Game: Guess Higher, Lower or Equal</h2>
+    <p>Score: <span id="score">0</span></p>
+    <p>Lives left: <span id="lives">3</span></p>
+    <div class="card-container">
+      <div id="current-card" class="card">
+        <span class="corner top-left"></span>
+        <span class="card-suit"></span>
+        <span class="corner bottom-right"></span>
+      </div>
+    </div>
+    <p><span id="cards-left">52</span> cards left</p>
+
+    <div class="buttons">
+      <button onclick="makeGuess('lower')">Lower card</button>
+      <button onclick="makeGuess('higher')">Higher card</button>
+      <button onclick="makeGuess('equal')">Equal</button>
+      <button class="restart-btn" onclick="startGame('restart')">↻</button>
+    </div>
+
+    <p id="message"></p>
+  </div>
+  <script src="script.js">module</script>
+</body>
+</html>

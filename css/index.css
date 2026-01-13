@@ -1,0 +1,25 @@
+/* Index-sida specific CSS */
+@import url('styles.css'); 
+
+/* Hero-sektion */
+.hero {
+  background: linear-gradient(135deg, rgba(43,122,120,0.1), rgba(113,135,110,0.1));
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+
+.features {
+  margin-bottom: 3rem;
+}
+
+
+.gallery {
+  margin-bottom: 3rem;
+}
+
+
+.todo {
+  margin-bottom: 3rem;
+  width: 80%;
+}

@@ -1,0 +1,80 @@
+/* Projekt-sida specific CSS */
+@import url('styles.css');
+
+.page-title {
+  background: linear-gradient(45deg, #070808, var(--btn-hover));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+h1, h2 {
+  color: #333;
+}
+
+select, input {
+  width: 60%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #638d80;
+  color: black;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #86bdbc;
+}
+
+#result {
+  background-color: #f4f4f4;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Let global `css/styles.css` control result image sizing for consistency across breakpoints */
+.country-result img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Country search result styling */
+.country-result {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.country-result img {
+  width: 80px;
+  height: auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.country-result-info p {
+  margin: 5px 0;
+}
+
+@media (max-width: 600px) {
+  select, input {
+    width: 100%;
+  }
+}
+@media (max-width: 500px) {
+#searchBtn {
+    width: 60%;
+    padding: 0.75rem;
+    font-size: 1.1rem;
+  }
+}

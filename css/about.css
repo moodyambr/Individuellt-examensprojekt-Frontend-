@@ -1,0 +1,19 @@
+/* About-sida specific CSS */
+@import url('styles.css');
+
+
+/*This code is for the fade-in animation*/
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.tech-list li {
+  transition: background 0.2s;
+  padding: 0.3rem;
+  border-radius: 4px;
+}
+
+.tech-list li:hover {
+  background: var(--input-bg);
+}

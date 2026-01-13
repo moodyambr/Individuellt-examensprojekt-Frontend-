@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>My Portfolio — Home</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <div class="container header-inner">
+      <h1 class="logo">My Portfolio</h1>
+      <nav aria-label="Main navigation">
+        <!-- Hamburger menu button -->
+        <button id="nav-toggle" aria-expanded="false" aria-controls="main-nav" class="hamburger-btn">
+          <svg class="icon icon-menu" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M3 12H21M3 6H21M3 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <svg class="icon icon-close" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <span class="sr-only">Menu</span>
+        </button>
+        
+        <ul id="main-nav" class="nav-list">
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects/project1.html">Country Search</a></li>
+          <li><a href="projects/cards-game/index.html">Cards Game</a></li>
+          <li><a href="projects/pomodoro/index.html">Pomodoro</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <div class="hero-content">
+        <div class="hero-image">
+          <img src="images/pexels-alef-morais-336305364-30684729.jpg" alt="A person photographing by the sea">
+          <figcaption>Photo by Alef Morais</figcaption>
+        </div>
+        <div class="hero-text">
+          <h2>Welcome to My Portfolio</h2>
+          <p>Explore my collection of web development projects including interactive galleries, productivity tools, and games. Built with modern web technologies and focused on user experience.</p>
+          <div class="hero-buttons">
+            <a href="https://www.youtube.com" class="cta-button" target="_blank">Follow me on YouTube</a>
+            <a href="https://www.instagram.com" class="cta-button" target="_blank">Follow me on Instagram</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="features container">
+      <article>
+        <h3>Interactive Gallery</h3>
+        <p>A simple slideshow with an interactive image gallery.</p>
+      </article>
+      <article>
+        <h3>Todo Demo</h3>
+        <p>A todo list with interactive functionality.</p>
+      </article>
+    </section>
+
+    <section class="gallery container" aria-labelledby="gallery-heading">
+      <h2 id="gallery-heading">Gallery</h2>
+      <div class="gallery-grid">
+        <figure class="gallery-item" data-id="0">
+          <img src="images/pexels-alef-morais-336305364-30684729.jpg" alt="A person photographing by the sea">
+          <figcaption>
+            <button class="like-btn" aria-pressed="false">♡ 0</button>
+            <button class="view-btn">View</button>
+          </figcaption>
+        </figure>
+        <figure class="gallery-item" data-id="1">
+          <img src="images/pexels-aleksey-kuprikov-1883853-3493777.jpg" alt="An image of a bridge in the mountains">
+          <figcaption>
+            <button class="like-btn" aria-pressed="false">♡ 0</button>
+            <button class="view-btn">View</button>
+          </figcaption>
+        </figure>
+        <figure class="gallery-item" data-id="2">
+          <img src="images/pexels-chris-janda-12879-62600.jpg" alt="An image of high mountains at dawn">
+          <figcaption>
+            <button class="like-btn" aria-pressed="false">♡ 0</button>
+            <button class="view-btn">View</button>
+          </figcaption>
+        </figure>
+        <figure class="gallery-item" data-id="3">
+          <img src="images/pexels-aleksey-kuprikov-1883853-3493777.jpg" alt="An image of a bridge spanning a deep valley">
+          <figcaption>
+            <button class="like-btn" aria-pressed="false">♡ 0</button>
+            <button class="view-btn">View</button>
+          </figcaption>
+        </figure>
+        <figure class="gallery-item" data-id="4">
+          <img src="images/pexels-frankdhill-1599899.jpg" alt="An image of a window">
+          <figcaption>
+            <button class="like-btn" aria-pressed="false">♡ 0</button>
+            <button class="view-btn">View</button>
+          </figcaption>
+        </figure>
+        <figure class="gallery-item" data-id="5">
+          <img src="images/pexels-tomas-anunziata-129267-3876394.jpg" alt="An image of a person standing on a cliff overlooking the sea">
+          <figcaption>
+            <button class="like-btn" aria-pressed="false">♡ 0</button>
+            <button class="view-btn">View</button>
+          </figcaption>
+        </figure>
+      </div>
+
+      <dialog id="lightbox" class="lightbox hidden">
+        <div class="lightbox-content">
+          <img id="lightbox-img" src="" alt="">
+          <div class="lightbox-controls">
+            <button id="prev">◀</button>
+            <button id="close-lightbox">×</button>
+            <button id="next">▶</button>
+          </div>
+        </div>
+      </dialog>
+    </section>
+
+    <section class="todo container" aria-labelledby="todo-heading">
+      <h2 id="todo-heading">Todo</h2>
+      <form id="todo-form">
+        <input id="todo-input" type="text" placeholder="Add task" aria-label="New task">
+        <button class="btn" type="submit">Add</button>
+      </form>
+      <ul id="todo-list"></ul>
+    </section>
+
+    <section id="contact" class="contact container">
+      <h2>Contact</h2>
+      <form id="contact-form">
+        <label>
+          Name
+          <input type="text" name="name" required>
+        </label>
+        <label>
+          Email
+          <input type="email" name="email" required>
+        </label>
+        <label>
+          Message
+          <textarea name="message" rows="4" required></textarea>
+        </label>
+        <button class="btn" type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <p>© 2025 My Portfolio</p>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects/project1.html">Country Search</a>
+        <a href="projects/cards-game/index.html">Cards Game</a>
+        <a href="projects/pomodoro/index.html">Pomodoro</a>
+
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/script.js" type="module"></script>
+</body>
+</html>
