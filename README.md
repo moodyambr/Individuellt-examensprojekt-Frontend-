@@ -49,7 +49,6 @@ Project details
 - Cards Game: Higher/Lower card guessing game with score, lives, and responsive layout.
 - Pomodoro Timer: Work/break timer with start/pause/reset and optional audio alerts.
 
-Contact
-If you need help, optimizations, or deployment, open an issue or message me.
+
 
 Last updated: 2025-12-30
